@@ -1,0 +1,33 @@
+--------------------------------------Software--------------------------------------
+Post Software - bruno https://www.usebruno.com/
+
+--------------------------------------Befehle--------------------------------------
+"dotnet add package Microsoft.AspNetCore.Mvc" impotiert mvc
+"dotnet new webapi -n ChangeMe" im verzeichnis der Projekte für ein neues Projekt
+
+//Testen
+curl http://localhost:5207/api/weatherforecast/hello //für GET
+Invoke-WebRequest -Uri "http://localhost:5207/api/test/hello22222222?name=Max" -Method POST //für Post
+
+
+--------------------------------------Websites--------------------------------------
+https://learn.microsoft.com/de-de/dotnet/fundamentals/networking/http/httpclient
+json convererter - https://json2csharp.com/
+API Controller - https://sbelialov.medium.com/set-up-an-api-controller-in-net-using-c-546133560129
+https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-9.0
+
+--------------------------------------Code Rest API--------------------------------------
+using Microsoft.AspNetCore.Mvc;
+
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+app.MapControllers();
+
+app.Run();
+
+
+--------------------------------------Tipps--------------------------------------
+JsonSerializer
